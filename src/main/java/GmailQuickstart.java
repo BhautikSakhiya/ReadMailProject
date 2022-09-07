@@ -59,18 +59,6 @@ public class GmailQuickstart {
                 .setApplicationName(APPLICATION_NAME)
                 .build();
 
-        // Print the labels in the user's account.
-//        ListLabelsResponse listResponse = service.users().labels().list(USER_ID).execute();
-//        List<Label> labels = listResponse.getLabels();
-//        if (labels.isEmpty()) {
-//            System.out.println("No labels found.");
-//        } else {
-//            System.out.println("Labels:");
-//            for (Label label : labels) {
-//                System.out.printf("- %s\n", label.getName());
-//            }
-//        }
-
         // Print the message
         ListMessagesResponse response = service.users().messages().list(USER_ID).execute();
         List<Message> messages = new ArrayList<Message>();
